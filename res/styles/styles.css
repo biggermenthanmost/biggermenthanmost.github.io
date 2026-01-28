@@ -1,0 +1,397 @@
+:root {
+    --nav-height: 80px;
+    --default-element-colour: rgba(31, 31, 31);
+    --default-font: Arial, Helvetica, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: black;
+    background-color: var(--default-element-colour);
+    font-family: var(--default-font);
+}
+
+.page {
+    padding-top: var(--nav-height);
+}
+
+/* ********* */
+/* #Nav bar */
+/* ********* */
+
+.site-nav {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: var(--nav-height);
+    background: var(--default-element-colour);
+    transition: background 0.3s ease;
+    z-index: 1000;
+}
+
+.transparent-nav .site-nav {
+    background: transparent;
+}
+
+.site-nav > a.fa-home {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    min-height: 0;
+    padding: 0.25rem;
+    margin: 0 2rem;
+    border-bottom: none;
+    color: whitesmoke;
+    font-size: 2rem;
+    transition: background 0.2s;
+    text-decoration: none;
+}
+
+.site-nav > a.fa-home:hover {
+    color: blueviolet;
+}
+
+.site-nav > ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    height: var(--nav-height);
+}
+
+.site-nav > ul > li {
+    display: flex;
+}
+
+.site-nav > ul > li > a {
+    display: flex;
+    align-items: center;
+    height: var(--nav-height);
+    text-decoration: none;
+    color: whitesmoke;
+    border-bottom: 3px solid transparent;
+    transition: border-color 0.2s ease;
+}
+
+.site-nav ul li a:hover {
+    border-bottom-color: blueviolet;
+}
+
+.site-nav ul li a span {
+    display: inline-block;
+    padding: 0.25rem 1rem;
+    border-radius: 0.25rem;
+    transition: background-color 0.2s;
+}
+
+.site-nav ul li a:hover span {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Dropdown container */
+.site-nav ul li.dropdown {
+    position: relative;
+}
+
+/* Dropdown menu */
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: var(--default-element-colour);
+    list-style: none;
+    display: none;
+    flex-direction: column;
+    border-radius: 0 0 0.5rem 0.5rem;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    z-index: 2000;
+}
+
+.site-nav ul.dropdown-menu {
+    display: none;
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-menu {
+    display: flex;
+}
+
+/* Fix dropdown item layout */
+.dropdown-menu li {
+    display: block;
+}
+
+/* Dropdown links */
+.dropdown-menu li a {
+    height: auto;
+    padding: 1rem;
+    color: whitesmoke;
+    transition: background 0.2s;
+    line-height: normal;
+    display: block;
+    width: 100%;
+    text-decoration: none;
+}
+
+.dropdown-menu li a:hover {
+    background: rgba(255,255,255,0.15);
+    border-bottom: 3px solid transparent;
+    border-bottom-color: blueviolet;
+}
+
+.header{
+    text-align: center;
+    font-size: 5em;
+    color: whitesmoke;
+    padding: 3vw;
+    background-color: darkgray;
+}
+
+/* ********* */
+/* #Carousel */
+/* ********* */
+
+.carousel-wrapper {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel {
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-slide::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to right,
+        rgba(0,0,0,0.4),
+        rgba(0,0,0,0.2),
+        rgba(0,0,0,0.4)
+    );
+    z-index: 1;
+}
+
+.carousel-slide {
+    min-width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.carousel-bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel-game-logo {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    opacity: 0.9;
+}
+
+.carousel-title {
+    color: whitesmoke;
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    z-index: 2;
+}
+
+.carousel-desc {
+    color: whitesmoke;
+    font-size: 1.1rem;
+    max-width: 600px;
+    text-align: center;
+    margin-bottom: 25px;
+    line-height: 1.6;
+    z-index: 2;
+}
+
+.carousel-btn {
+    background: blueviolet;
+    color: whitesmoke;
+    border: none;
+    padding: 12px 28px;
+    border-radius: 50px;
+    font-size: 2.5rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    text-decoration: none;
+    z-index: 2;
+}
+
+.carousel-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-3px);
+}
+
+/* Navigation Controls */
+.nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 3;
+    background: rgba(0,0,0,0.3);
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.nav-btn:hover {
+    background: rgba(0,0,0,0.5);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.prev-btn {
+    left: 15px;
+}
+
+.next-btn {
+    right: 15px;
+}
+
+.nav-dots {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 12px;
+    z-index: 3;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.4);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.dot.active {
+    background: blueviolet;
+    transform: scale(1.2);
+}
+
+/* ******* */
+/* #Footer */
+/* ******* */
+.footer {
+    color: whitesmoke;
+    background-color: var(--default-element-colour);
+    width: 100%;
+    position: relative;
+    height: auto;
+    align-items: center;
+}
+
+.footer .contain {
+    margin-top: 3vh;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    text-align: left;
+}
+
+.footer .col {
+    float: none;
+    width: 190px;
+    height: auto;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    padding: 0px 20px 20px 20px;
+}
+
+.footer .col h1 {
+    margin: 0;
+    padding: 0;
+    font-family: inherit;
+    font-size: 1rem;
+    line-height: 17px;
+    padding: 20px 0px 5px 0px;
+    color: blueviolet;
+    font-weight: normal;
+    text-transform: uppercase;
+    letter-spacing: 0.250em;
+    }
+
+.footer .col ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.footer .col ul li a{
+    color: whitesmoke;
+    font-size: 0.8rem;
+    font-weight: bold;
+    padding: 5px 0px 5px 0px;
+}
+
+.footerBottom{
+    background-color: var(--default-element-colour);
+    padding: 20px;
+    text-align: center;
+    color: whitesmoke
+}
+
+@media (max-width: 1920px) {
+    .carousel {
+        height: 85vh;
+    }
+}
+
+@media (max-width: 950px) {
+    .carousel {
+        height: 60vh;
+    }
+}
+
+@media (max-width: 700px) {
+    .carousel {
+        height: 70vh;
+    }
+    .carousel-section {
+        padding: 20px;
+    }
+    
+    .carousel-slide {
+        padding: 30px 20px;
+    }
+    
+    .carousel-title {
+        font-size: 1.8rem;
+    }
+}

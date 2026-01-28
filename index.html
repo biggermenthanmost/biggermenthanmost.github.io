@@ -1,0 +1,32 @@
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Bigger Men Than Most</title>
+	<meta property="og:title" content="Bigger Men Than Most">
+	<link rel="stylesheet" href="res/styles/styles.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="res/styles/home.css">
+
+</head>
+<body class="page-home transparent-nav">
+    <base-nav></base-nav>
+        <!-- Carousel -->
+    <div class="carousel-wrapper">
+        <div class="carousel" id="Carousel"></div>
+        <button class="nav-btn prev-btn" id="Prev"><i class="fas fa-chevron-left"></i></button>
+        <button class="nav-btn next-btn" id="Next"><i class="fas fa-chevron-right"></i></button>
+        <div class="nav-dots" id="Dots"></div>
+    </div>
+
+    <div class="games-wrapper">
+        <h1>Games</h1>
+        <div id="games-container" class="games-container"></div>
+    </div>
+    <base-footer></base-footer>
+
+    <script src="/scripts/baseElements.js"></script>
+    <script src="/scripts/games.js"></script>
+	<script src="/scripts/nav_scroll_transparent.js"></script>
+    <script src="/scripts/carousel.js" data-json-path="/data/home_carousel.json"></script>
+</body>
+</html>

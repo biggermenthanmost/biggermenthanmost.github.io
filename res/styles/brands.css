@@ -1,0 +1,9 @@
+.fa-linkedin { color: #0A66C2; }
+.fa-github   { color: #171515; }
+.fa-youtube  { color: #FF0000; }
+
+.fa-linkedin:hover { color: #004182; }
+.fa-github:hover   { color: #000000; }
+.fa-youtube:hover  { color: #CC0000; }
+
+.fa-globe { color: #555555; }

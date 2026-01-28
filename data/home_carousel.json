@@ -1,0 +1,16 @@
+[
+    {
+        "title":"Doom, Impending",
+        "description": "This is the description for Untitled Game 1. Lorem ipsum or whatever",
+        "buttonText": "Play Game",
+        "backgroundImage": "/res/images/doomimpending.png",
+        "buttonLink": "https://joshleighdev.itch.io/doom-inpending"
+    },
+    {
+        "title":"Untitled Game",
+        "description": "This is the description for Untitled Game 2. Lorem ipsum or whatever",
+        "buttonText": "Play Game",
+        "backgroundImage": "/res/images/camera.jpg",
+        "buttonLink": ""
+    }
+]

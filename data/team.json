@@ -1,0 +1,42 @@
+[
+    {
+        "id":"0",
+        "name": "Brandon Harris",
+        "role": "Game & Web Developer | Artist",
+        "photo": "",
+        "links": [{"type":"LinkedIn","url":"https://www.linkedin.com/in/brandon-harris-dev/"}, {"type":"Portfolio","url":"https://bharris-dev.github.io/"}],
+        "description": ""
+    },
+    {
+        "id":"1",
+        "name": "Jack Hinton",
+        "role": "Game Developer",
+        "photo": "",
+        "links": [{"type":"LinkedIn","url":"https://www.linkedin.com/in/jack-hinton-6b84b3241/"}],
+        "description": ""
+    },
+    {
+        "id":"2",
+        "name": "Joshua Leigh",
+        "role": "Game Designer",
+        "photo": "",
+        "links": [{"type":"LinkedIn","url":"https://www.linkedin.com/in/joshualeigh2002/"}, {"type":"Portfolio","url":"https://joshualeigh2002.wixsite.com/joshua-leigh"}],
+        "description": ""
+    },
+    {
+        "id":"3",
+        "name": "Kayci Bowden",
+        "role": "Social Media & Digital Marketing Manager",
+        "photo": "",
+        "links": [{"type":"YouTube","url":"https://youtube.com/@melainavega3135?si=rbH6xmNwn6Eu7XhN"}],
+        "description": ""
+    },
+    {
+        "id":"4",
+        "name": "Louis Jones",
+        "role": "Game Developer | Artist",
+        "photo": "",
+        "links": [],
+        "description": ""
+    }
+]
